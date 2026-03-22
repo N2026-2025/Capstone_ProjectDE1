@@ -1,0 +1,18 @@
+flowchart TD
+
+A[FakeStore API] --> B[Kafka Producer]
+B --> C[Kafka Topic: products_stream]
+
+D[CSV Tickets] --> E[Batch Ingestion]
+
+C --> F[PyFlink Streaming ETL]
+E --> G[Batch ETL]
+
+F --> H[Parquet Data Lake]
+G --> H
+
+H --> I[OLAP Warehouse<br>(DuckDB / BigQuery)]
+
+I --> J[dbt Models<br>(STAR Schema)]
+
+J --> K[BI / OLAP Tools<br>(Metabase / Superset)]

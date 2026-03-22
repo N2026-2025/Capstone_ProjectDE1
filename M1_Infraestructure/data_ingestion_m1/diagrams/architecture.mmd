@@ -1,0 +1,6 @@
+graph LR
+    A[CSV Kaggle] --> B[Data Pipeline]
+    F[API FakeStore] --> B
+    B --> C[Parquet Data Lake]
+    B --> D[PostgreSQL]
+    B --> E[Data Warehouse]

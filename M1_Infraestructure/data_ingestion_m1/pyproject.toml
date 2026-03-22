@@ -1,0 +1,12 @@
+[project]
+name = "de-module1"
+version = "0.1.0"
+dependencies = [
+    "pandas",
+    "pyarrow",
+    "sqlalchemy",
+    "psycopg2-binary",
+    "tqdm",
+    "click",
+    "jupyter"
+]

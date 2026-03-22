@@ -1,0 +1,12 @@
+retail_voice:
+  outputs:
+    dev:
+      type: postgres
+      host: localhost
+      user: root
+      pass: root
+      port: 5432
+      dbname: retail_db
+      schema: public
+      threads: 4
+  target: dev
